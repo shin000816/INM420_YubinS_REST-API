@@ -1,0 +1,22 @@
+{
+  "name": "inm420_yubins_rest-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server --baseDir=\"./pistachio\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shin000816/INM420_YubinS_REST-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shin000816/INM420_YubinS_REST-API/issues"
+  },
+  "homepage": "https://github.com/shin000816/INM420_YubinS_REST-API#readme",
+  "description": "",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
