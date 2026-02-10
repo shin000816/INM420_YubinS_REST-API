@@ -1,5 +1,11 @@
 document.getElementById("btn").addEventListener("click", getWeather);
 
+// default city weather on page load
+window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("city").value = "Toronto";
+    getWeather();
+});
+
 function getWeather() {
     const city = document.getElementById("city").value;
     const weatherDiv = document.getElementById("weather");
@@ -10,7 +16,7 @@ function getWeather() {
     status.textContent = "Loading...";
     weatherDiv.innerHTML = "";
 
-    fetch(`https://api.weatherapi.com/v1/current.json?key=${ACCESS_KEY}&q=${city}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${ACCESS_KEY}&q=${encodeURIComponent(city)}`)
         .then(response => {
         if (!response.ok) {
             throw new Error("Failed to fetch weather data");
