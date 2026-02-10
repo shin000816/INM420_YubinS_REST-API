@@ -1,0 +1,158 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: Noto Sans, sans-serif;
+    background: #f3f5f9;
+    color: #111;
+    padding: 40px 16px;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+select, button {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #d6dbe6;
+    background: #fff;
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.98);
+}
+
+.status {
+    display: none;
+    margin: 10px 0 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #fff3cd;
+    border: 1px solid #ffe69c;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e9f2;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    min-height: 120px;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+
+.place h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.place p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+.temp {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.temp img {
+    width: 56px;
+    height: 56px;
+}
+
+.temp .deg {
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    border: 1px solid #dbe3ff;
+    font-size: 13px;
+}
+
+.grid {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.item {
+    border: 1px solid #eef1f7;
+    border-radius: 12px;
+    padding: 10px 12px;
+    background: #fafbfe;
+}
+
+.item .label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.item .value {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Day */
+.card.day {
+    background: linear-gradient(135deg, #e0f2ff, #ffffff);
+    border-color: #cfe8ff;
+}
+
+/* Night */
+.card.night {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    border-color: #374151;
+    color: #f9fafb;
+}
+
+.card.night .item {
+    background-color: #374151;
+}
+
+.card.night .place p,
+.card.night .item .label {
+    color: #cbd5e1;
+}
+
+.card.night .badge {
+    background: #374151;
+    border-color: #4b5563;
+    color: #e5e7eb;
+}

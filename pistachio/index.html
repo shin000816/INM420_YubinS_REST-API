@@ -6,24 +6,38 @@
 
         <!-- CSS Reset -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css"/>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="./CSS/style.css">
 
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <title>REST API Assignment</title>
 
     </head>
     <body>
-        <select id="city">
-            <option value="Toronto">Toronto</option>
-            <option value="Vancouver">Vancouver</option>
-            <option value="Winnipeg">Winnipeg</option>
-        </select>
+        <div class="container">
+            <h1>Today's Weather</h1>
 
-        <button id="btn">Search</button>
+            <div class="controls">
+                <select id="city">
+                    <option value="Toronto">Toronto</option>
+                    <option value="Vancouver">Vancouver</option>
+                    <option value="Winnipeg">Winnipeg</option>
+                </select>
 
-        <div id="weather"></div>
+                <button id="btn">Search</button>
+            </div>
+
+            <p id="status" class="status"></p>
+
+            <div id="weather" class="card"></div>
+        </div>
 
         <!-- JS -->
-        <script src="./JS/config.js" defer></script>
+        <script src="./JS/config.js"></script>
         <script src="./JS/script.js" defer></script>
     </body>
 </html>
